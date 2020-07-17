@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --primary: #242B53;
+    --secondary: #4A548E;
+    --terciary: #979DC4;
+    --light: #EDEDED;
+    --white: #FFF;
+    --silver: C2C3C6;
+}
+
+body{
+    font-family: 'Lato', cursive;
+    background-image: url("../assets/background-edm.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.box{
+    display: block;
+    width: 55%;
+    margin: 3vh auto 3vh;
+    border-radius: 15px;
+    background-color: var(--secondary);
+    color: var(--white);
+    opacity: .95;
+}
+
+header{
+    background-color: var(--primary);
+    border-radius: 15px 15px 0 0;
+    padding: 3%;
+}
+
+#title{
+    margin: 1%;
+    font-size: 2.5rem;
+}
+
+#description{
+    margin-top: 0.85rem;
+    font-size: 1.2rem;
+}
+
+main{
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+.form-group{
+    margin: 1.3rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+
+.label{
+    font-size: 1.4rem;
+}
+
+.form-input{
+    font-size: 1.2rem;
+    font-family: 'Lato', cursive;
+    padding: 0.4rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+option, select{
+    font-size: 1.2rem;
+    font-family: 'Lato', cursive;
+    padding: 0.4rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+.radio-container{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-container input{
+    display: none;
+}
+
+.radio-container .circle{
+    background-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    /*vertical-align: center;*/
+}
+.radio-container .text-radio{
+    padding-left: 2rem;
+}
+
+.radio-container:hover input ~ .circle{
+    background-color: var(--terciary);
+}
+
+.radio-container input:checked ~ .circle{
+    background-color: black;
+    opacity: .9;
+}
+
+.radio-container .circle::before{
+    content: "";
+    background-color: var(--light);
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 50%;
+    display: none;
+}
+
+.radio-container input:checked ~ .circle::before{
+    display: block;
+}
+
+/* CUSTOM CHECKBOX */
+
+/* container que abraça cada radio button*/ 
+.check-container{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ocultando checkbox padrão do navegador*/
+.check-container input{
+    display: none;
+}
+
+/* add um quadrado que será novo checkbox*/
+.check-container .square{
+    background-color: var(--primary);
+    display: inline-block;
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 50%;
+    left: 0;                        /* aqui ele vai todo para o canto esquerdo do check-container */
+    transform: translateY(-50%);
+}
+
+/* quando passa o cursor do mouse sobre o checkbox, muda a sua cor*/
+.check-container:hover input ~ .square{
+    background-color: var(--terciary);
+}
+
+/* chegando texto para a direita, para que o quadrado não sobreponha-o*/
+.check-container .text-check{
+    padding-left: 2rem;
+}
+
+.check-container input:checked ~ .square{
+    background-color: black;
+    opacity: .9;
+}
+
+.check-container .square::before{
+    display: none;
+	content: "✔";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.check-container input:checked ~ .square:before{
+    display: inline-block;
+}
+
+/** TEXTAREA */
+
+.form-group textarea{
+    font-size: 1.2rem;
+    font-family: 'Lato', cursive;
+    padding: 0.4rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-group textarea:focus{
+    outline: none;
+    border: .5px solid var(--primary);
+}
+
+.form-group #submit{
+    font-size: 1.2rem;
+    font-family: 'Lato', cursive;
+    padding: .6rem;
+    cursor: pointer;
+    border: 0;
+    background-color: var(--primary);
+    color: var(--white);
+    opacity: 1;
+    outline: none;
+}
+
+@media only screen and (max-width: 1200px){
+    .box{
+        width: 75%;
+    }
+
+}
+@media only screen and (max-width: 992px){
+    .box{
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .box{
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .box{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    header{
+        border-radius: 0;
+    }
+
+}

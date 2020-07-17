@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+
+    <div class="box">
+        <header>
+            <h1 id="title" class=" text-center">Mega Produtor</h1>
+            <p id="description" class="text-center">Seja bem-vindo ao Mega Produtor</p>
+        </header>
+        <main>
+            <form action="" id="survey-form">
+                <div class="form-group">
+                    <label for="name" id="name-label" class="label">Nome</label>
+                    <input type="text" name="name" id="name" class="form-input" required placeholder="Digite o seu nome">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email" id="email-label" class="label">E-mail</label>
+                    <input type="email" name="email" id="email" class="form-input" placeholder="Digite o seu melhor e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="age" id="number-label" class="label">Idade</label>
+                    <input type="number" name="age" id="number" class="form-input" placeholder="Digite a sua idade" min="10" max="130">
+                </div>
+                <div class="form-group">
+                    <label for="genre" id="number-label" class="label">Gênero musical</label>
+                    <select name="genre" id="dropdown">
+                        <option value="" selected disabled hidden>Escolha aqui</option>
+                        <option value="Progressive House">Progressive House</option>
+                        <option value="Uplifting Trance">Uplifting Trance</option>
+                        <option value="Psy Trance">Psy Trance</option>
+                        <option value="Techno House">Techno House</option>
+                        <option value="Deep House">Deep House</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="" id="level" class="label">Nível de produção</label>
+                    <label for="beginner" class="radio-container">
+                        <input type="radio" name="level" id="beginner" value="Iniciante">
+                        <span class="text-radio">Iniciante</span>
+                        <span class="circle"></span>
+                    </label>
+                    <label for="intermediate" class="radio-container">
+                        <input type="radio" name="level" id="intermediate" value="Intermediário">
+                        <span class="text-radio">Intermediário</span>
+                        <span class="circle"></span>
+                    </label>
+                    <label for="professional" class="radio-container">
+                        <input type="radio" name="level" id="professional" value="Profissional">
+                        <span class="text-radio">Profissional</span>
+                        <span class="circle"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="" id="idioma">Idiomas</label>
+                    <label for="portugues" class="check-container">
+                        <input type="checkbox" name="portugues" id="portugues" checked>
+                        <span class="text-check">Português</span>
+                        <span class="square"></span>
+                    </label>
+                    <label for="ingles" class="check-container">
+                        <input type="checkbox" name="ingles" id="ingles">
+                        <span class="text-check">Inglês</span>
+                        <span class="square"></span>
+                    </label>
+                    <label for="espanhol" class="check-container">
+                        <input type="checkbox" name="espanhol" id="espanhol">
+                        <span class="text-check">Espanhol</span>
+                        <span class="square"></span>
+                    </label>
+                    <label for="alemao" class="check-container">
+                        <input type="checkbox" name="alemao" id="alemao">
+                        <span class="text-check">Alemão</span>
+                        <span class="square"></span>
+                    </label>
+                    <label for="mandarim" class="check-container">
+                        <input type="checkbox" name="mandarim" id="mandarim">
+                        <span class="text-check">Mandarim</span>
+                        <span class="square"></span>
+                    </label>
+                    <label for="outro" class="check-container">
+                        <input type="checkbox" name="outro" id="outro">
+                        <span class="text-check">Outro</span>
+                        <span class="square"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="biografy">Biografia</label>
+                    <textarea name="biografy" id="biografy" cols="30" rows="13"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" id="submit" value="Enviar">
+                </div>
+
+            </form>
+        </main>
+    </div>
+    
+</body>
+</html>
